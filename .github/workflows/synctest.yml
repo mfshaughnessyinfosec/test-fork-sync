@@ -1,0 +1,19 @@
+name: Sync Fork
+
+on:
+  schedule:
+    - cron: '*/5 * * * *' # every 5 minutes
+  workflow_dispatch: # on button click
+
+jobs:
+  sync:
+    if: github.repository == 'mfshaughnessyinfosec/test-fork-sync'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: tgymnich/fork-sync@v1.8
+        with:
+          owner: mfshaughnessy
+          base: main
+          head: main
+          merge_method: rebase
