@@ -16,3 +16,4 @@ jobs:
           owner: mfshaughnessy
           base: main
           head: main
+          merge_method: rebase
