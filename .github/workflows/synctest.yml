@@ -7,7 +7,7 @@ on:
 
 jobs:
   sync:
-
+    if: github.repository == 'mfshaughnessyinfosec/test-fork-sync'
     runs-on: ubuntu-latest
 
     steps:
