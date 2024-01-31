@@ -21,7 +21,4 @@ jobs:
 
     steps:
     - name: Manually trigger fork sync
-      uses: fjogeleit/http-request-action@v1
-      with:
-        url: 'https://pull.git.ci/process/mfshaughnessyinfosec/test-fork-sync'
-        method: 'POST'
+      run: xdg-open 'https://pull.git.ci/process/mfshaughnessyinfosec/test-fork-sync'
